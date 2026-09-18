@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Del Robot al Escenario | techUniversal</title>
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- Navbar & Shortcuts -->
+    <header class="site-header">
+        <div class="container-custom navbar-inner">
+            <div class="logo-wrapper">
+                <div class="logo-icon">
+                    <i data-lucide="bot" style="width: 24px; height: 24px;"></i>
+                </div>
+                <div>
+                    <span class="logo-title font-heading">techUniversal</span>
+                    <span class="logo-subtitle">Del Robot al Escenario</span>
+                </div>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#origen" class="nav-link">Origen</a>
+                <a href="#simulador" class="nav-link">Simulador Ipuana</a>
+                <a href="#academias" class="nav-link">Academias</a>
+                <a href="#eventos" class="nav-link">Eventos</a>
+                <a href="#padres" class="nav-link">Para Padres</a>
+                <a href="#investigacion" class="nav-link">Investigación FLL</a>
+            </nav>
+
+            <div class="nav-actions">
+                <a href="#simulador" class="btn-primary-header">
+                    <i data-lucide="sparkles" style="width: 16px; height: 16px; margin-right: 8px;"></i>
+                    Probar Perfil
+                </a>
+                <button id="menu-btn" class="menu-toggle-btn">
+                    <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#origen" class="mobile-link">Origen</a>
+            <a href="#simulador" class="mobile-link">Simulador Ipuana</a>
+            <a href="#academias" class="mobile-link">Academias</a>
+            <a href="#eventos" class="mobile-link">Eventos</a>
+            <a href="#padres" class="mobile-link">Para Padres</a>
+            <a href="#investigacion" class="mobile-link">Investigación FLL</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container-custom" style="position: relative; z-index: 10;">
+            <div class="hero-grid">
+                <div class="hero-content-col" style="display: flex; flex-direction: column; justify-content: center;">
+                    <div class="hero-badge">
+                        <i data-lucide="cpu" style="width: 14px; height: 14px; margin-right: 6px;"></i>
+                        Innovación Educativa • techUniversal
+                    </div>
+                    <h1 class="hero-title font-heading">
+                        Del Robot al Escenario: <br>
+                        <span class="gradient-heading-text">Conectando las pasiones de tus hijos</span> con el mundo real
+                    </h1>
+                    <p class="hero-subtitle">
+                        Transformamos el perfil creativo de arte y música creado por el robot Ipuana en un puente directo hacia academias, cursos y eventos locales diseñados para potenciar el talento natural de tus hijos.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#simulador" class="btn-primary">
+                            <i data-lucide="play-circle" style="width: 20px; height: 20px; margin-right: 8px;"></i>
+                            Simular Perfil Creativo
+                        </a>
+                        <a href="#origen" class="btn-secondary">
+                            <i data-lucide="book-open" style="width: 20px; height: 20px; margin-right: 8px; color: #4f46e5;"></i>
+                            Conocer el Proyecto
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Graphic Card -->
+                <div class="hero-card-col">
+                    <div class="hero-card-container">
+                        <div class="hero-card-glow"></div>
+                        <div class="hero-card-box">
+                            <div class="robot-header-row">
+                                <div class="robot-info">
+                                    <div class="robot-avatar">
+                                        <i data-lucide="bot" style="width: 28px; height: 28px;"></i>
+                                    </div>
+                                    <div>
+                                        <h3 class="robot-name font-heading">Robot Ipuana</h3>
+                                        <p class="robot-status-sub">Estado: Sincronizado</p>
+                                    </div>
+                                </div>
+                                <span class="status-badge">
+                                    <span class="status-dot"></span>
+                                    Activo
+                                </span>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div class="profile-detected-box">
+                                    <div class="profile-detected-label">Perfil Creativo Detectado</div>
+                                    <div id="hero-detected-profile" class="profile-detected-title font-heading">
+                                        <span style="font-size: 1.5rem; margin-right: 0.5rem;">🎨</span> Arte, Pintura y Diseño
+                                    </div>
+                                    <p class="profile-detected-desc">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales.</p>
+                                </div>
+
+                                <div class="stats-grid">
+                                    <div class="stat-box">
+                                        <span id="hero-academies-count" class="stat-number font-heading">2</span>
+                                        <span class="stat-label">Academias Cercanas</span>
+                                    </div>
+                                    <div class="stat-box">
+                                        <span id="hero-events-count" class="stat-number font-heading" style="color: #8b5cf6;">2</span>
+                                        <span class="stat-label">Talleres este mes</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container-custom">
+            <p>techUniversal • Proyecto FLL 2026. Hecho con pasión para los pequeños talentos.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
