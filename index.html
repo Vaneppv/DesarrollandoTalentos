@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Del Robot al Escenario | techUniversal</title>
+    <title>Desarrollando Talentos | TechUniversal</title>
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/styles.css">
     <!-- Lucide Icons -->
@@ -19,7 +19,7 @@
                     <i data-lucide="bot" style="width: 24px; height: 24px;"></i>
                 </div>
                 <div>
-                    <span class="logo-title font-heading">techUniversal</span>
+                    <span class="logo-title font-heading">TechUniversal</span>
                     <span class="logo-subtitle">Del Robot al Escenario</span>
                 </div>
             </div>
@@ -201,6 +201,20 @@
                     <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Perfil Música y Ritmo</h3>
                     <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
                 </button>
+
+                <!-- Tecnología -->
+                <button onclick="selectProfile('tecnologia')" id="btn-tecnologia" class="profile-btn">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤖</div>
+                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Tecnología y Robótica</h3>
+                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                </button>
+
+                <!-- Literatura -->
+                <button onclick="selectProfile('literatura')" id="btn-literatura" class="profile-btn">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📚</div>
+                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Literatura y Letras</h3>
+                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                </button>
             </div>
 
             <!-- Simulator Result Panel -->
@@ -237,6 +251,84 @@
                             </p>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 3. Mapa de Academias Cercanas -->
+    <section id="academias" class="section-padding bg-white-section">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="badge-tag">3. Academias Locales</span>
+                <h2 class="section-title font-heading">Escuelas Validadas para el Desarrollo Infantil</h2>
+                <p class="section-subtitle">Escuelas especializadas en pintura, dibujo y música validadas para el desarrollo óptimo de los niños.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Academy 1 -->
+                <div class="card-item" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <span class="badge-tag" style="background-color: #e0e7ff; color: #4338ca; margin-bottom: 0;">🎨 Arte Plásticas</span>
+                            <span style="font-weight: 700; color: #f59e0b; display: flex; align-items: center;"><i data-lucide="star" style="width: 16px; height: 16px; margin-right: 4px; fill: #f59e0b;"></i> 4.9</span>
+                        </div>
+                        <h3 class="card-title font-heading">Academia de Artes Plásticas 'Picassito'</h3>
+                        <p class="card-desc" style="margin-bottom: 1rem;">Curso: Pintura al Óleo, Acuarela y Expresión Creativa infantil.</p>
+                        <p class="text-xs text-slate-500 flex items-center" style="font-size: 0.875rem; color: #64748b; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #94a3b8;"></i> Zona Norte (A 1.2 km de tu ubicación)
+                        </p>
+                    </div>
+                    <button onclick="alert('¡Información solicitada de Picassito!')" class="btn-secondary" style="width: 100%; padding: 0.75rem; font-size: 0.875rem;">Solicitar Información</button>
+                </div>
+
+                <!-- Academy 2 -->
+                <div class="card-item" style="display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                            <span class="badge-tag" style="background-color: #f3e8ff; color: #7e22ce; margin-bottom: 0;">🎵 Música y Ritmo</span>
+                            <span style="font-weight: 700; color: #f59e0b; display: flex; align-items: center;"><i data-lucide="star" style="width: 16px; height: 16px; margin-right: 4px; fill: #f59e0b;"></i> 5.0</span>
+                        </div>
+                        <h3 class="card-title font-heading">Conservatorio Infantil 'Mozart Kids'</h3>
+                        <p class="card-desc" style="margin-bottom: 1rem;">Curso: Iniciación Musical, Violín y Teclado para niños.</p>
+                        <p class="text-xs text-slate-500 flex items-center" style="font-size: 0.875rem; color: #64748b; display: flex; align-items: center; margin-bottom: 1.5rem;">
+                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #94a3b8;"></i> Zona Este (A 1.8 km de tu ubicación)
+                        </p>
+                    </div>
+                    <button onclick="alert('¡Información solicitada de Mozart Kids!')" class="btn-secondary" style="width: 100%; padding: 0.75rem; font-size: 0.875rem;">Solicitar Información</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 4. Agenda de Futuros Eventos -->
+    <section id="eventos" class="section-padding bg-slate-section">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="badge-tag">4. Eventos Locales</span>
+                <h2 class="section-title font-heading">Talleres y Concursos de Talento</h2>
+                <p class="section-subtitle">Talleres infantiles, concursos de talento y exposiciones de arte y música en tu ciudad.</p>
+            </div>
+
+            <div class="grid-2">
+                <!-- Event 1 -->
+                <div class="card-item" style="background-color: #ffffff;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <span class="badge-tag" style="background-color: #dbeafe; color: #1d4ed8; margin-bottom: 0;">Sábado 28 Sep</span>
+                        <span style="font-size: 0.75rem; font-weight: 600; color: #64748b;">Parque Central</span>
+                    </div>
+                    <h3 class="card-title font-heading">Concurso Infantil de Pintura al Aire Libre</h3>
+                    <p class="card-desc">Un espacio para que los pequeños artistas demuestren su talento con caballetes, pinceles y colores en el parque central de la ciudad.</p>
+                </div>
+
+                <!-- Event 2 -->
+                <div class="card-item" style="background-color: #ffffff;">
+                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
+                        <span class="badge-tag" style="background-color: #fae8ff; color: #86198f; margin-bottom: 0;">Domingo 5 Oct</span>
+                        <span style="font-size: 0.75rem; font-weight: 600; color: #64748b;">Teatro Municipal</span>
+                    </div>
+                    <h3 class="card-title font-heading">Festival de Orquestas Infantiles</h3>
+                    <p class="card-desc">Presentación estelar de jóvenes músicos y ensambles de violín, teclado y percusión de las academias locales.</p>
                 </div>
             </div>
         </div>

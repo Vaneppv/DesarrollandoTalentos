@@ -581,6 +581,17 @@ html {
     }
 }
 
+.grid-2 {
+    display: grid;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
 .card-item {
     background-color: #f8fafc;
     border: 1px solid #f1f5f9;
@@ -630,6 +641,12 @@ html {
 @media (min-width: 768px) {
     .simulator-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 1024px) {
+    .simulator-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 }
 
