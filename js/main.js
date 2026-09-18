@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    // Initialize Simulator default view
+    if (typeof selectProfile === 'function') {
+        selectProfile('arte');
+    }
+
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');

@@ -177,6 +177,71 @@
         </div>
     </section>
 
+    <!-- 2. Simulador Interactivo -->
+    <section id="simulador" class="section-padding bg-slate-section">
+        <div class="container-custom">
+            <div class="section-header">
+                <span class="badge-tag">2. ¿Cómo Funciona la Magia?</span>
+                <h2 class="section-title font-heading">Simulador de Perfil Creativo Ipuana</h2>
+                <p class="section-subtitle">Prueba cómo la app conecta instantáneamente el perfil del robot con la oferta local de cursos y eventos.</p>
+            </div>
+
+            <!-- Profile Selector Buttons -->
+            <div class="simulator-grid">
+                <!-- Arte -->
+                <button onclick="selectProfile('arte')" id="btn-arte" class="profile-btn" style="border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.05);">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎨</div>
+                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Perfil Arte y Pintura</h3>
+                    <span class="block text-xs text-indigo-600 font-semibold mt-1">Seleccionado</span>
+                </button>
+
+                <!-- Música -->
+                <button onclick="selectProfile('musica')" id="btn-musica" class="profile-btn">
+                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎵</div>
+                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Perfil Música y Ritmo</h3>
+                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                </button>
+            </div>
+
+            <!-- Simulator Result Panel -->
+            <div class="simulator-result-card">
+                <div style="max-width: 42rem; margin-bottom: 2rem;">
+                    <span class="badge-tag" style="background-color: rgba(255,255,255,0.1); color: #818cf8;">Sincronización en Tiempo Real</span>
+                    <h3 id="result-title" class="text-2xl sm:text-3xl font-extrabold font-heading text-white" style="font-size: 1.875rem; font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.75rem;">Perfil: Arte, Pintura y Diseño</h3>
+                    <p id="result-desc" class="text-slate-300 text-sm sm:text-base mt-2" style="color: #cbd5e1; font-size: 1rem; line-height: 1.5;">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales durante la interacción con el robot Ipuana.</p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-6 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                    <!-- Academias recomendadas -->
+                    <div class="space-y-4">
+                        <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider flex items-center">
+                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #818cf8;"></i> Academias Recomendadas
+                        </h4>
+                        <div id="result-academies" style="display: flex; flex-direction: column; gap: 1rem;">
+                            <!-- Injected by simulator.js -->
+                        </div>
+                    </div>
+
+                    <!-- Eventos sugeridos -->
+                    <div class="space-y-4">
+                        <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider flex items-center">
+                            <i data-lucide="calendar" style="width: 16px; height: 16px; margin-right: 6px; color: #a78bfa;"></i> Próximos Eventos
+                        </h4>
+                        <div id="result-events" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                            <!-- Injected by simulator.js -->
+                        </div>
+                        <div style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); margin-top: 1rem;">
+                            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider block mb-1">Ruta de Desarrollo Sugerida</span>
+                            <p id="result-route" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
+                                Nivel 1: Taller de iniciación cromática -> Nivel 2: Técnicas mixtas y volumen -> Nivel 3: Exposición en galería juvenil.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container-custom">
@@ -184,6 +249,7 @@
         </div>
     </footer>
 
+    <script src="js/simulator.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
