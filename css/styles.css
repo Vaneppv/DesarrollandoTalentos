@@ -757,6 +757,44 @@ html {
 .simulator-event-title { font-weight: 700; color: #ffffff; display: block; margin-bottom: 0.125rem; }
 .simulator-event-date { color: #cbd5e1; }
 .btn-simulator-attend { color: #c4b5fd; font-weight: 700; background: none; border: none; cursor: pointer; margin-left: 0.5rem; }
+
+.editorial-box {
+    background-color: #0f172a;
+    color: #ffffff;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 2rem;
+    max-width: 48rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 20px 25px -5px rgba(15, 23, 42, 0.25);
+}
+
+.editorial-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.editorial-quote {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #cbd5e1;
+    line-height: 1.75;
+    margin-bottom: 1.5rem;
+}
+
+.editorial-author {
+    font-size: 0.875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #818cf8;
+}
+
+.section-padding-sm {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+}
 .profile-btn-inactive { border-color: #e2e8f0; background-color: #ffffff; }
 .profile-badge-inactive { color: #94a3b8; }
 .profile-badge-active { color: #4f46e5; }
