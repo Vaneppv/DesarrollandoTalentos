@@ -1,0 +1,58 @@
+/* Custom styles and overrides for techUniversal FLL Project */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Outfit', sans-serif;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar selection */
+::selection {
+    background-color: #4F46E5;
+    color: #ffffff;
+}
+
+/* Custom Component Classes */
+.hero-subtitle {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: #475569;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+}
+
+@media (min-width: 640px) {
+    .hero-subtitle {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero-subtitle {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+.section-subtitle {
+    color: #475569;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+@media (min-width: 640px) {
+    .section-subtitle {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+    }
+}
