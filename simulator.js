@@ -67,30 +67,30 @@ function selectProfile(profileKey) {
     if (heroTitleEl) {
         const icons = { arte: '🎨', musica: '🎵', tecnologia: '🤖', literatura: '📚' };
         const icon = icons[profileKey] || '✨';
-        heroTitleEl.innerHTML = `<span class="text-2xl mr-2">${icon}</span> ${data.title.replace('Perfil: ', '')}`;
+        heroTitleEl.innerHTML = `<span class="emoji-lg">${icon}</span> ${data.title.replace('Perfil: ', '')}`;
     }
     if (heroAcademiesEl) heroAcademiesEl.innerText = data.academies.length;
     if (heroEventsEl) heroEventsEl.innerText = data.events.length;
 
     // Update button styles
     document.querySelectorAll('.profile-btn').forEach(btn => {
-        btn.style.borderColor = '#e2e8f0';
-        btn.style.backgroundColor = '#ffffff';
+        btn.classList.remove('active-profile');
+        btn.classList.add('profile-btn-inactive');
         const badge = btn.querySelector('span:last-child');
         if (badge) {
             badge.innerText = "Hacer clic para probar";
-            badge.style.color = "#94a3b8";
+            badge.className = "block text-xs profile-badge-inactive font-semibold mt-1";
         }
     });
 
     const activeBtn = document.getElementById(`btn-${profileKey}`);
     if (activeBtn) {
-        activeBtn.style.borderColor = '#4f46e5';
-        activeBtn.style.backgroundColor = 'rgba(79, 70, 229, 0.05)';
+        activeBtn.classList.remove('profile-btn-inactive');
+        activeBtn.classList.add('active-profile');
         const activeBadge = activeBtn.querySelector('span:last-child');
         if (activeBadge) {
             activeBadge.innerText = "Seleccionado";
-            activeBadge.style.color = "#4f46e5";
+            activeBadge.className = "block text-xs profile-badge-active font-semibold mt-1";
         }
     }
 
@@ -107,13 +107,13 @@ function selectProfile(profileKey) {
     const academiesContainer = document.getElementById('result-academies');
     if (academiesContainer) {
         academiesContainer.innerHTML = data.academies.map(acc => `
-            <div style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between;">
+            <div class="simulator-item-card">
                 <div>
-                    <h5 style="font-weight: 700; color: #ffffff; font-size: 0.875rem; margin-bottom: 0.25rem;">${acc.name}</h5>
-                    <p style="font-size: 0.75rem; color: #cbd5e1; margin-bottom: 0.25rem;">${acc.course}</p>
-                    <span style="font-size: 0.75rem; color: #818cf8; display: block;">${acc.location}</span>
+                    <h5 class="simulator-item-title">${acc.name}</h5>
+                    <p class="simulator-item-course">${acc.course}</p>
+                    <span class="simulator-item-loc">${acc.location}</span>
                 </div>
-                <button onclick="alert('¡Inscripción solicitada en ${acc.name}!')" style="padding: 0.375rem 0.875rem; background-color: #4f46e5; color: #ffffff; border-radius: 0.5rem; font-size: 0.75rem; font-weight: 600; border: none; cursor: pointer;">Ver</button>
+                <button onclick="alert('¡Inscripción solicitada en ${acc.name}!')" class="btn-simulator-action">Ver</button>
             </div>
         `).join('');
     }
@@ -122,12 +122,12 @@ function selectProfile(profileKey) {
     const eventsContainer = document.getElementById('result-events');
     if (eventsContainer) {
         eventsContainer.innerHTML = data.events.map(ev => `
-            <div style="background-color: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem;">
+            <div class="simulator-event-card">
                 <div>
-                    <span style="font-weight: 700; color: #ffffff; display: block; margin-bottom: 0.125rem;">${ev.title}</span>
-                    <span style="color: #cbd5e1;">${ev.date} • ${ev.location}</span>
+                    <span class="simulator-event-title">${ev.title}</span>
+                    <span class="simulator-event-date">${ev.date} • ${ev.location}</span>
                 </div>
-                <button onclick="alert('¡Registrado al evento ${ev.title}!')" style="color: #c4b5fd; font-weight: 700; background: none; border: none; cursor: pointer; margin-left: 0.5rem;">Asistir</button>
+                <button onclick="alert('¡Registrado al evento ${ev.title}!')" class="btn-simulator-attend">Asistir</button>
             </div>
         `).join('');
     }

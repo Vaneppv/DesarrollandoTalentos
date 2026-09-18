@@ -16,7 +16,7 @@
         <div class="container-custom navbar-inner">
             <div class="logo-wrapper">
                 <div class="logo-icon">
-                    <i data-lucide="bot" style="width: 24px; height: 24px;"></i>
+                    <i data-lucide="bot" class="icon-lg"></i>
                 </div>
                 <div>
                     <span class="logo-title font-heading">TechUniversal</span>
@@ -35,11 +35,11 @@
 
             <div class="nav-actions">
                 <a href="#simulador" class="btn-primary-header">
-                    <i data-lucide="sparkles" style="width: 16px; height: 16px; margin-right: 8px;"></i>
+                    <i data-lucide="sparkles" class="icon-sm mr-2"></i>
                     Probar Perfil
                 </a>
                 <button id="menu-btn" class="menu-toggle-btn">
-                    <i data-lucide="menu" style="width: 24px; height: 24px;"></i>
+                    <i data-lucide="menu" class="icon-lg"></i>
                 </button>
             </div>
         </div>
@@ -57,13 +57,9 @@
 
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container-custom" style="position: relative; z-index: 10;">
+        <div class="container-custom relative-z">
             <div class="hero-grid">
-                <div class="hero-content-col" style="display: flex; flex-direction: column; justify-content: center;">
-                    <div class="hero-badge">
-                        <i data-lucide="cpu" style="width: 14px; height: 14px; margin-right: 6px;"></i>
-                        Innovación Educativa • techUniversal
-                    </div>
+                <div class="hero-content-col flex-col-center">
                     <h1 class="hero-title font-heading">
                         Del Robot al Escenario: <br>
                         <span class="gradient-heading-text">Conectando las pasiones de tus hijos</span> con el mundo real
@@ -73,11 +69,11 @@
                     </p>
                     <div class="hero-buttons">
                         <a href="#simulador" class="btn-primary">
-                            <i data-lucide="play-circle" style="width: 20px; height: 20px; margin-right: 8px;"></i>
+                            <i data-lucide="play-circle" class="icon-md mr-2"></i>
                             Simular Perfil Creativo
                         </a>
                         <a href="#origen" class="btn-secondary">
-                            <i data-lucide="book-open" style="width: 20px; height: 20px; margin-right: 8px; color: #4f46e5;"></i>
+                            <i data-lucide="book-open" class="icon-md mr-2 text-indigo"></i>
                             Conocer el Proyecto
                         </a>
                     </div>
@@ -91,7 +87,7 @@
                             <div class="robot-header-row">
                                 <div class="robot-info">
                                     <div class="robot-avatar">
-                                        <i data-lucide="bot" style="width: 28px; height: 28px;"></i>
+                                        <i data-lucide="bot" class="icon-xl"></i>
                                     </div>
                                     <div>
                                         <h3 class="robot-name font-heading">Robot Ipuana</h3>
@@ -104,11 +100,11 @@
                                 </span>
                             </div>
 
-                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                            <div class="flex-col-gap">
                                 <div class="profile-detected-box">
                                     <div class="profile-detected-label">Perfil Creativo Detectado</div>
                                     <div id="hero-detected-profile" class="profile-detected-title font-heading">
-                                        <span style="font-size: 1.5rem; margin-right: 0.5rem;">🎨</span> Arte, Pintura y Diseño
+                                        <span class="emoji-lg">🎨</span> Arte, Pintura y Diseño
                                     </div>
                                     <p class="profile-detected-desc">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales.</p>
                                 </div>
@@ -119,7 +115,7 @@
                                         <span class="stat-label">Academias Cercanas</span>
                                     </div>
                                     <div class="stat-box">
-                                        <span id="hero-events-count" class="stat-number font-heading" style="color: #8b5cf6;">2</span>
+                                        <span id="hero-events-count" class="stat-number font-heading text-stat-purple">2</span>
                                         <span class="stat-label">Talleres este mes</span>
                                     </div>
                                 </div>
@@ -135,7 +131,6 @@
     <section id="origen" class="section-padding bg-white-section">
         <div class="container-custom">
             <div class="section-header">
-                <span class="badge-tag">1. Origen y Motivación</span>
                 <h2 class="section-title font-heading">El "Por qué" de nuestro proyecto</h2>
                 <p class="section-subtitle">Solucionando la brecha entre la curiosidad infantil y las oportunidades reales del entorno local.</p>
             </div>
@@ -154,7 +149,7 @@
 
                 <!-- Card 2 -->
                 <div class="card-item">
-                    <div class="card-icon-box" style="background-color: #fef3c7; color: #d97706;">
+                    <div class="card-icon-box bg-warning-light">
                         🧩
                     </div>
                     <h3 class="card-title font-heading">El Problema Real</h3>
@@ -165,7 +160,7 @@
 
                 <!-- Card 3 -->
                 <div class="card-item">
-                    <div class="card-icon-box" style="background-color: #d1fae5; color: #059669;">
+                    <div class="card-icon-box bg-success-light">
                         🌉
                     </div>
                     <h3 class="card-title font-heading">La Solución</h3>
@@ -181,7 +176,6 @@
     <section id="simulador" class="section-padding bg-slate-section">
         <div class="container-custom">
             <div class="section-header">
-                <span class="badge-tag">2. ¿Cómo Funciona la Magia?</span>
                 <h2 class="section-title font-heading">Simulador de Perfil Creativo Ipuana</h2>
                 <p class="section-subtitle">Prueba cómo la app conecta instantáneamente el perfil del robot con la oferta local de cursos y eventos.</p>
             </div>
@@ -189,49 +183,49 @@
             <!-- Profile Selector Buttons -->
             <div class="simulator-grid">
                 <!-- Arte -->
-                <button onclick="selectProfile('arte')" id="btn-arte" class="profile-btn" style="border-color: #4f46e5; background-color: rgba(79, 70, 229, 0.05);">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎨</div>
-                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Perfil Arte y Pintura</h3>
+                <button onclick="selectProfile('arte')" id="btn-arte" class="profile-btn active-profile">
+                    <div class="emoji-xl">🎨</div>
+                    <h3 class="card-title font-heading margin-bottom-sm">Perfil Arte y Pintura</h3>
                     <span class="block text-xs text-indigo-600 font-semibold mt-1">Seleccionado</span>
                 </button>
 
                 <!-- Música -->
                 <button onclick="selectProfile('musica')" id="btn-musica" class="profile-btn">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🎵</div>
-                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Perfil Música y Ritmo</h3>
+                    <div class="emoji-xl">🎵</div>
+                    <h3 class="card-title font-heading margin-bottom-sm">Perfil Música y Ritmo</h3>
                     <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
                 </button>
 
                 <!-- Tecnología -->
                 <button onclick="selectProfile('tecnologia')" id="btn-tecnologia" class="profile-btn">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">🤖</div>
-                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Tecnología y Robótica</h3>
+                    <div class="emoji-xl">🤖</div>
+                    <h3 class="card-title font-heading margin-bottom-sm">Tecnología y Robótica</h3>
                     <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
                 </button>
 
                 <!-- Literatura -->
                 <button onclick="selectProfile('literatura')" id="btn-literatura" class="profile-btn">
-                    <div style="font-size: 2.5rem; margin-bottom: 0.75rem;">📚</div>
-                    <h3 class="card-title font-heading" style="margin-bottom: 0.25rem;">Literatura y Letras</h3>
+                    <div class="emoji-xl">📚</div>
+                    <h3 class="card-title font-heading margin-bottom-sm">Literatura y Letras</h3>
                     <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
                 </button>
             </div>
 
             <!-- Simulator Result Panel -->
             <div class="simulator-result-card">
-                <div style="max-width: 42rem; margin-bottom: 2rem;">
-                    <span class="badge-tag" style="background-color: rgba(255,255,255,0.1); color: #818cf8;">Sincronización en Tiempo Real</span>
-                    <h3 id="result-title" class="text-2xl sm:text-3xl font-extrabold font-heading text-white" style="font-size: 1.875rem; font-weight: 800; margin-top: 0.5rem; margin-bottom: 0.75rem;">Perfil: Arte, Pintura y Diseño</h3>
-                    <p id="result-desc" class="text-slate-300 text-sm sm:text-base mt-2" style="color: #cbd5e1; font-size: 1rem; line-height: 1.5;">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales durante la interacción con el robot Ipuana.</p>
+                <div class="simulator-header-box">
+                    <span class="badge-tag badge-translucent">Sincronización en Tiempo Real</span>
+                    <h3 id="result-title" class="result-title font-heading text-white">Perfil: Arte, Pintura y Diseño</h3>
+                    <p id="result-desc" class="result-desc">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales durante la interacción con el robot Ipuana.</p>
                 </div>
 
-                <div class="grid md:grid-cols-2 gap-6 pt-4" style="border-top: 1px solid rgba(255,255,255,0.1);">
+                <div class="result-grid">
                     <!-- Academias recomendadas -->
                     <div class="space-y-4">
                         <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider flex items-center">
-                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #818cf8;"></i> Academias Recomendadas
+                            <i data-lucide="map-pin" class="icon-sm mr-1-5 text-indigo"></i> Academias Recomendadas
                         </h4>
-                        <div id="result-academies" style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div id="result-academies" class="flex-col-gap">
                             <!-- Injected by simulator.js -->
                         </div>
                     </div>
@@ -239,13 +233,13 @@
                     <!-- Eventos sugeridos -->
                     <div class="space-y-4">
                         <h4 class="font-heading font-bold text-white text-sm uppercase tracking-wider flex items-center">
-                            <i data-lucide="calendar" style="width: 16px; height: 16px; margin-right: 6px; color: #a78bfa;"></i> Próximos Eventos
+                            <i data-lucide="calendar" class="icon-sm mr-1-5 text-purple"></i> Próximos Eventos
                         </h4>
-                        <div id="result-events" style="display: flex; flex-direction: column; gap: 0.75rem;">
+                        <div id="result-events" class="flex-col-gap-sm">
                             <!-- Injected by simulator.js -->
                         </div>
-                        <div style="background-color: rgba(255,255,255,0.05); padding: 1rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); margin-top: 1rem;">
-                            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider block mb-1">Ruta de Desarrollo Sugerida</span>
+                        <div class="route-box">
+                            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider block margin-bottom-sm">Ruta de Desarrollo Sugerida</span>
                             <p id="result-route" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
                                 Nivel 1: Taller de iniciación cromática -> Nivel 2: Técnicas mixtas y volumen -> Nivel 3: Exposición en galería juvenil.
                             </p>
@@ -260,42 +254,41 @@
     <section id="academias" class="section-padding bg-white-section">
         <div class="container-custom">
             <div class="section-header">
-                <span class="badge-tag">3. Academias Locales</span>
-                <h2 class="section-title font-heading">Escuelas Validadas para el Desarrollo Infantil</h2>
+                <h2 class="section-title font-heading">Academias Locales</h2>
                 <p class="section-subtitle">Escuelas especializadas en pintura, dibujo y música validadas para el desarrollo óptimo de los niños.</p>
             </div>
 
             <div class="grid-2">
                 <!-- Academy 1 -->
-                <div class="card-item" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="card-item card-flex">
                     <div>
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                            <span class="badge-tag" style="background-color: #e0e7ff; color: #4338ca; margin-bottom: 0;">🎨 Arte Plásticas</span>
-                            <span style="font-weight: 700; color: #f59e0b; display: flex; align-items: center;"><i data-lucide="star" style="width: 16px; height: 16px; margin-right: 4px; fill: #f59e0b;"></i> 4.9</span>
+                        <div class="card-header-flex">
+                            <span class="badge-tag margin-bottom-none badge-indigo-soft">🎨 Arte Plásticas</span>
+                            <span class="rating-badge"><i data-lucide="star" class="star-icon"></i> 4.9</span>
                         </div>
                         <h3 class="card-title font-heading">Academia de Artes Plásticas 'Picassito'</h3>
-                        <p class="card-desc" style="margin-bottom: 1rem;">Curso: Pintura al Óleo, Acuarela y Expresión Creativa infantil.</p>
-                        <p class="text-xs text-slate-500 flex items-center" style="font-size: 0.875rem; color: #64748b; display: flex; align-items: center; margin-bottom: 1.5rem;">
-                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #94a3b8;"></i> Zona Norte (A 1.2 km de tu ubicación)
+                        <p class="card-desc card-desc-mb">Curso: Pintura al Óleo, Acuarela y Expresión Creativa infantil.</p>
+                        <p class="card-location">
+                            <i data-lucide="map-pin" class="icon-sm mr-1-5 text-slate-muted"></i> Zona Norte (A 1.2 km de tu ubicación)
                         </p>
                     </div>
-                    <button onclick="alert('¡Información solicitada de Picassito!')" class="btn-secondary" style="width: 100%; padding: 0.75rem; font-size: 0.875rem;">Solicitar Información</button>
+                    <button onclick="alert('¡Información solicitada de Picassito!')" class="btn-full-sm btn-secondary">Solicitar Información</button>
                 </div>
 
                 <!-- Academy 2 -->
-                <div class="card-item" style="display: flex; flex-direction: column; justify-content: space-between;">
+                <div class="card-item card-flex">
                     <div>
-                        <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                            <span class="badge-tag" style="background-color: #f3e8ff; color: #7e22ce; margin-bottom: 0;">🎵 Música y Ritmo</span>
-                            <span style="font-weight: 700; color: #f59e0b; display: flex; align-items: center;"><i data-lucide="star" style="width: 16px; height: 16px; margin-right: 4px; fill: #f59e0b;"></i> 5.0</span>
+                        <div class="card-header-flex">
+                            <span class="badge-tag margin-bottom-none badge-purple-soft">🎵 Música y Ritmo</span>
+                            <span class="rating-badge"><i data-lucide="star" class="star-icon"></i> 5.0</span>
                         </div>
                         <h3 class="card-title font-heading">Conservatorio Infantil 'Mozart Kids'</h3>
-                        <p class="card-desc" style="margin-bottom: 1rem;">Curso: Iniciación Musical, Violín y Teclado para niños.</p>
-                        <p class="text-xs text-slate-500 flex items-center" style="font-size: 0.875rem; color: #64748b; display: flex; align-items: center; margin-bottom: 1.5rem;">
-                            <i data-lucide="map-pin" style="width: 16px; height: 16px; margin-right: 6px; color: #94a3b8;"></i> Zona Este (A 1.8 km de tu ubicación)
+                        <p class="card-desc card-desc-mb">Curso: Iniciación Musical, Violín y Teclado para niños.</p>
+                        <p class="card-location">
+                            <i data-lucide="map-pin" class="icon-sm mr-1-5 text-slate-muted"></i> Zona Este (A 1.8 km de tu ubicación)
                         </p>
                     </div>
-                    <button onclick="alert('¡Información solicitada de Mozart Kids!')" class="btn-secondary" style="width: 100%; padding: 0.75rem; font-size: 0.875rem;">Solicitar Información</button>
+                    <button onclick="alert('¡Información solicitada de Mozart Kids!')" class="btn-full-sm btn-secondary">Solicitar Información</button>
                 </div>
             </div>
         </div>
@@ -305,30 +298,85 @@
     <section id="eventos" class="section-padding bg-slate-section">
         <div class="container-custom">
             <div class="section-header">
-                <span class="badge-tag">4. Eventos Locales</span>
-                <h2 class="section-title font-heading">Talleres y Concursos de Talento</h2>
+                <h2 class="section-title font-heading">Eventos Locales</h2>
                 <p class="section-subtitle">Talleres infantiles, concursos de talento y exposiciones de arte y música en tu ciudad.</p>
             </div>
 
             <div class="grid-2">
                 <!-- Event 1 -->
-                <div class="card-item" style="background-color: #ffffff;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                        <span class="badge-tag" style="background-color: #dbeafe; color: #1d4ed8; margin-bottom: 0;">Sábado 28 Sep</span>
-                        <span style="font-size: 0.75rem; font-weight: 600; color: #64748b;">Parque Central</span>
+                <div class="card-item bg-white-card">
+                    <div class="card-header-flex">
+                        <span class="badge-tag margin-bottom-none bg-info-light">Sábado 28 Sep</span>
+                        <span class="text-slate-sm-semibold">Parque Central</span>
                     </div>
                     <h3 class="card-title font-heading">Concurso Infantil de Pintura al Aire Libre</h3>
                     <p class="card-desc">Un espacio para que los pequeños artistas demuestren su talento con caballetes, pinceles y colores en el parque central de la ciudad.</p>
                 </div>
 
                 <!-- Event 2 -->
-                <div class="card-item" style="background-color: #ffffff;">
-                    <div style="display: flex; justify-content: space-between; align-items: start; margin-bottom: 1rem;">
-                        <span class="badge-tag" style="background-color: #fae8ff; color: #86198f; margin-bottom: 0;">Domingo 5 Oct</span>
-                        <span style="font-size: 0.75rem; font-weight: 600; color: #64748b;">Teatro Municipal</span>
+                <div class="card-item bg-white-card">
+                    <div class="card-header-flex">
+                        <span class="badge-tag margin-bottom-none bg-pink-light">Domingo 5 Oct</span>
+                        <span class="text-slate-sm-semibold">Teatro Municipal</span>
                     </div>
                     <h3 class="card-title font-heading">Festival de Orquestas Infantiles</h3>
                     <p class="card-desc">Presentación estelar de jóvenes músicos y ensambles de violín, teclado y percusión de las academias locales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. Tranquilidad para los Padres -->
+    <section id="padres" class="section-padding bg-dark-section relative-overflow">
+        <div class="container-custom relative-z">
+            <div class="section-header">
+                <h2 class="section-title font-heading text-white-heading">Tranquilidad y Guía Familiar</h2>
+                <p class="section-subtitle text-muted-desc">Acompañando el talento sin abrumar, respaldados por la ciencia del juego y la robótica educativa.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card-item-dark">
+                    <div class="card-icon-box card-icon-translucent">🎮</div>
+                    <h3 class="card-title font-heading text-white-heading">Sin Presiones</h3>
+                    <p class="card-desc text-muted-desc">Enfoque lúdico que prioriza la diversión, la curiosidad y el descubrimiento autónomo por encima de la exigencia excesiva.</p>
+                </div>
+                <div class="card-item-dark">
+                    <div class="card-icon-box card-icon-green">🧠</div>
+                    <h3 class="card-title font-heading text-white-heading">Validación Pedagógica</h3>
+                    <p class="card-desc text-muted-desc">Respaldo de educadores y especialistas en arte, música, tecnología e infancia para garantizar un desarrollo integral.</p>
+                </div>
+                <div class="card-item-dark">
+                    <div class="card-icon-box card-icon-pink">📈</div>
+                    <h3 class="card-title font-heading text-white-heading">Seguimiento de Progreso</h3>
+                    <p class="card-desc text-muted-desc">Informes periódicos y recomendaciones basadas en la evolución del perfil creativo generado por el robot Ipuana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. Componente de Investigación FLL -->
+    <section id="investigacion" class="section-padding bg-slate-section">
+        <div class="container-custom">
+            <div class="section-header">
+                <h2 class="section-title font-heading">Validación Científica y Tecnológica</h2>
+                <p class="section-subtitle">Solucionando la brecha de desarrollo infantil a través de innovación educativa.</p>
+            </div>
+
+            <div class="grid-3">
+                <div class="card-item">
+                    <div class="card-icon-box">🔬</div>
+                    <h3 class="card-title font-heading">Justificación</h3>
+                    <p class="card-desc">Validación de cómo la robótica y la sincronización de datos resuelven la desconexión entre los intereses infantiles y la oferta local.</p>
+                </div>
+                <div class="card-item">
+                    <div class="card-icon-box bg-warning-light">📊</div>
+                    <h3 class="card-title font-heading">Metodología</h3>
+                    <p class="card-desc">Encuestas a padres, profesores y tutores para identificar las dificultades comunes al elegir actividades extracurriculares óptimas.</p>
+                </div>
+                <div class="card-item">
+                    <div class="card-icon-box bg-success-light">🌍</div>
+                    <h3 class="card-title font-heading">Impacto Social</h3>
+                    <p class="card-desc">Fomento temprano de habilidades artísticas, musicales, científicas y literarias, asegurando que ningún talento quede desatendido.</p>
                 </div>
             </div>
         </div>
