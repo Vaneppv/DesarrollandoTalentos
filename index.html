@@ -9,12 +9,12 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body>
+<body id="top">
 
     <!-- Navbar & Shortcuts -->
     <header class="site-header">
         <div class="container-custom navbar-inner">
-            <div class="logo-wrapper">
+            <a href="#top" class="logo-wrapper">
                 <div class="logo-icon">
                     <i data-lucide="bot" class="icon-lg"></i>
                 </div>
@@ -22,7 +22,7 @@
                     <span class="logo-title font-heading">TechUniversal</span>
                     <span class="logo-subtitle">Del Robot al Escenario</span>
                 </div>
-            </div>
+            </a>
 
             <nav class="nav-links">
                 <a href="#origen" class="nav-link">Origen</a>
@@ -34,7 +34,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="#simulador" class="btn-primary-header">
+                <a href="#simulador" class="btn-primary-header" onclick="revealSimulator()">
                     <i data-lucide="sparkles" class="icon-sm mr-2"></i>
                     Probar Perfil
                 </a>
@@ -47,7 +47,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu">
             <a href="#origen" class="mobile-link">Origen</a>
-            <a href="#simulador" class="mobile-link">Simulador Ipuana</a>
+            <a href="#simulador" class="mobile-link" onclick="revealSimulator()">Simulador Ipuana</a>
             <a href="#academias" class="mobile-link">Academias</a>
             <a href="#eventos" class="mobile-link">Eventos</a>
             <a href="#padres" class="mobile-link">Para Padres</a>
@@ -68,7 +68,7 @@
                         Transformamos el perfil creativo de arte y música creado por el robot Ipuana en un puente directo hacia academias, cursos y eventos locales diseñados para potenciar el talento natural de tus hijos.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#simulador" class="btn-primary">
+                        <a href="#simulador" class="btn-primary" onclick="revealSimulator()">
                             <i data-lucide="play-circle" class="icon-md mr-2"></i>
                             Simular Perfil Creativo
                         </a>
@@ -178,38 +178,45 @@
             <div class="section-header">
                 <h2 class="section-title font-heading">Simulador de Perfil Creativo Ipuana</h2>
                 <p class="section-subtitle">Prueba cómo la app conecta instantáneamente el perfil del robot con la oferta local de cursos y eventos.</p>
+                <div style="margin-top: 1.5rem;" id="simulator-cta-box">
+                    <button onclick="revealSimulator()" class="btn-primary">
+                        <i data-lucide="play-circle" class="icon-md mr-2"></i>
+                        Iniciar Simulador Interactivo
+                    </button>
+                </div>
             </div>
 
-            <!-- Profile Selector Buttons -->
-            <div class="simulator-grid">
-                <!-- Arte -->
-                <button onclick="selectProfile('arte')" id="btn-arte" class="profile-btn active-profile">
-                    <div class="emoji-xl">🎨</div>
-                    <h3 class="card-title font-heading margin-bottom-sm">Perfil Arte y Pintura</h3>
-                    <span class="block text-xs text-indigo-600 font-semibold mt-1">Seleccionado</span>
-                </button>
+            <div id="simulator-interactive-content" class="simulator-interactive-content">
+                <!-- Profile Selector Buttons -->
+                <div class="simulator-grid">
+                    <!-- Arte -->
+                    <button onclick="selectProfile('arte')" id="btn-arte" class="profile-btn active-profile">
+                        <div class="emoji-xl">🎨</div>
+                        <h3 class="card-title font-heading margin-bottom-sm">Perfil Arte y Pintura</h3>
+                        <span class="block text-xs text-indigo-600 font-semibold mt-1">Seleccionado</span>
+                    </button>
 
-                <!-- Música -->
-                <button onclick="selectProfile('musica')" id="btn-musica" class="profile-btn">
-                    <div class="emoji-xl">🎵</div>
-                    <h3 class="card-title font-heading margin-bottom-sm">Perfil Música y Ritmo</h3>
-                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
-                </button>
+                    <!-- Música -->
+                    <button onclick="selectProfile('musica')" id="btn-musica" class="profile-btn">
+                        <div class="emoji-xl">🎵</div>
+                        <h3 class="card-title font-heading margin-bottom-sm">Perfil Música y Ritmo</h3>
+                        <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                    </button>
 
-                <!-- Tecnología -->
-                <button onclick="selectProfile('tecnologia')" id="btn-tecnologia" class="profile-btn">
-                    <div class="emoji-xl">🤖</div>
-                    <h3 class="card-title font-heading margin-bottom-sm">Tecnología y Robótica</h3>
-                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
-                </button>
+                    <!-- Tecnología -->
+                    <button onclick="selectProfile('tecnologia')" id="btn-tecnologia" class="profile-btn">
+                        <div class="emoji-xl">🤖</div>
+                        <h3 class="card-title font-heading margin-bottom-sm">Tecnología y Robótica</h3>
+                        <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                    </button>
 
-                <!-- Literatura -->
-                <button onclick="selectProfile('literatura')" id="btn-literatura" class="profile-btn">
-                    <div class="emoji-xl">📚</div>
-                    <h3 class="card-title font-heading margin-bottom-sm">Literatura y Letras</h3>
-                    <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
-                </button>
-            </div>
+                    <!-- Literatura -->
+                    <button onclick="selectProfile('literatura')" id="btn-literatura" class="profile-btn">
+                        <div class="emoji-xl">📚</div>
+                        <h3 class="card-title font-heading margin-bottom-sm">Literatura y Letras</h3>
+                        <span class="block text-xs text-slate-400 font-semibold mt-1">Hacer clic para probar</span>
+                    </button>
+                </div>
 
             <!-- Simulator Result Panel -->
             <div class="simulator-result-card">
@@ -247,11 +254,12 @@
                     </div>
                 </div>
             </div>
+          </div>
         </div>
     </section>
 
     <!-- 3. Mapa de Academias Cercanas -->
-    <section id="academias" class="section-padding bg-white-section">
+    <section id="academias" class="section-padding bg-white-section hidden-section">
         <div class="container-custom">
             <div class="section-header">
                 <h2 class="section-title font-heading">Academias Locales</h2>
@@ -295,7 +303,7 @@
     </section>
 
     <!-- 4. Agenda de Futuros Eventos -->
-    <section id="eventos" class="section-padding bg-slate-section">
+    <section id="eventos" class="section-padding bg-slate-section hidden-section">
         <div class="container-custom">
             <div class="section-header">
                 <h2 class="section-title font-heading">Eventos Locales</h2>

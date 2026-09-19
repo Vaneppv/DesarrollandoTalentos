@@ -27,3 +27,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+
+function revealSimulator() {
+    const content = document.getElementById('simulator-interactive-content');
+    const ctaBox = document.getElementById('simulator-cta-box');
+    const academias = document.getElementById('academias');
+    const eventos = document.getElementById('eventos');
+
+    if (content) {
+        content.classList.add('active');
+    }
+    if (ctaBox) {
+        ctaBox.style.display = 'none';
+    }
+    if (academias) {
+        academias.classList.remove('hidden-section');
+    }
+    if (eventos) {
+        eventos.classList.remove('hidden-section');
+    }
+    if (typeof selectProfile === 'function') {
+        selectProfile('arte');
+    }
+    const simSection = document.getElementById('simulador');
+    if (simSection) {
+        simSection.scrollIntoView({ behavior: 'smooth' });
+    }
+}
+
