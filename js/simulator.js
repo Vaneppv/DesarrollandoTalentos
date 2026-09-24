@@ -61,6 +61,7 @@ function selectProfile(profileKey) {
 
     // Update Header Hero Card
     const heroTitleEl = document.getElementById('hero-detected-profile');
+    const heroDescEl = document.getElementById('hero-detected-desc');
     const heroAcademiesEl = document.getElementById('hero-academies-count');
     const heroEventsEl = document.getElementById('hero-events-count');
 
@@ -68,6 +69,9 @@ function selectProfile(profileKey) {
         const icons = { arte: '🎨', musica: '🎵', tecnologia: '🤖', literatura: '📚' };
         const icon = icons[profileKey] || '✨';
         heroTitleEl.innerHTML = `<span class="emoji-lg">${icon}</span> ${data.title.replace('Perfil: ', '')}`;
+    }
+    if (heroDescEl) {
+        heroDescEl.innerText = data.desc;
     }
     if (heroAcademiesEl) heroAcademiesEl.innerText = data.academies.length;
     if (heroEventsEl) heroEventsEl.innerText = data.events.length;

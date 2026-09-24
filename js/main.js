@@ -6,11 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
-    // Initialize Simulator default view
-    if (typeof selectProfile === 'function') {
-        selectProfile('arte');
-    }
-
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -28,7 +23,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-function revealSimulator() {
+function revealSimulator(event) {
+    if (event) {
+        event.preventDefault();
+    }
     const content = document.getElementById('simulator-interactive-content');
     const ctaBox = document.getElementById('simulator-cta-box');
     const academias = document.getElementById('academias');

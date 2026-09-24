@@ -34,7 +34,7 @@
             </nav>
 
             <div class="nav-actions">
-                <a href="#simulador" class="btn-primary-header" onclick="revealSimulator()">
+                <a href="#simulador" class="btn-primary-header" onclick="revealSimulator(event)">
                     <i data-lucide="sparkles" class="icon-sm mr-2"></i>
                     Probar Perfil
                 </a>
@@ -47,7 +47,7 @@
         <!-- Mobile Menu -->
         <div id="mobile-menu" class="mobile-menu">
             <a href="#origen" class="mobile-link">Origen</a>
-            <a href="#simulador" class="mobile-link" onclick="revealSimulator()">Simulador Ipuana</a>
+            <a href="#simulador" class="mobile-link" onclick="revealSimulator(event)">Simulador Ipuana</a>
             <a href="#academias" class="mobile-link">Academias</a>
             <a href="#eventos" class="mobile-link">Eventos</a>
             <a href="#padres" class="mobile-link">Para Padres</a>
@@ -68,7 +68,7 @@
                         Transformamos el perfil creativo de arte y música creado por el robot Ipuana en un puente directo hacia academias, cursos y eventos locales diseñados para potenciar el talento natural de tus hijos.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#simulador" class="btn-primary" onclick="revealSimulator()">
+                        <a href="#simulador" class="btn-primary" onclick="revealSimulator(event)">
                             <i data-lucide="play-circle" class="icon-md mr-2"></i>
                             Simular Perfil Creativo
                         </a>
@@ -104,18 +104,18 @@
                                 <div class="profile-detected-box">
                                     <div class="profile-detected-label">Perfil Creativo Detectado</div>
                                     <div id="hero-detected-profile" class="profile-detected-title font-heading">
-                                        <span class="emoji-lg">🎨</span> Arte, Pintura y Diseño
+                                        <span class="emoji-lg">⏳</span> Pendiente de Simulación
                                     </div>
-                                    <p class="profile-detected-desc">El niño demostró alta sensibilidad cromática y destreza en dinámicas visuales.</p>
+                                    <p id="hero-detected-desc" class="profile-detected-desc">Inicie el simulador interactivo para detectar el talento natural de sus hijos con el robot Ipuana.</p>
                                 </div>
 
                                 <div class="stats-grid">
                                     <div class="stat-box">
-                                        <span id="hero-academies-count" class="stat-number font-heading">2</span>
+                                        <span id="hero-academies-count" class="stat-number font-heading">—</span>
                                         <span class="stat-label">Academias Cercanas</span>
                                     </div>
                                     <div class="stat-box">
-                                        <span id="hero-events-count" class="stat-number font-heading text-stat-purple">2</span>
+                                        <span id="hero-events-count" class="stat-number font-heading text-stat-purple">—</span>
                                         <span class="stat-label">Talleres este mes</span>
                                     </div>
                                 </div>
@@ -179,7 +179,7 @@
                 <h2 class="section-title font-heading">Simulador de Perfil Creativo Ipuana</h2>
                 <p class="section-subtitle">Prueba cómo la app conecta instantáneamente el perfil del robot con la oferta local de cursos y eventos.</p>
                 <div style="margin-top: 1.5rem;" id="simulator-cta-box">
-                    <button onclick="revealSimulator()" class="btn-primary">
+                    <button onclick="revealSimulator(event)" class="btn-primary">
                         <i data-lucide="play-circle" class="icon-md mr-2"></i>
                         Iniciar Simulador Interactivo
                     </button>
