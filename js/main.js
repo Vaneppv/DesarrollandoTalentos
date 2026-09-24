@@ -6,6 +6,11 @@ document.addEventListener('DOMContentLoaded', () => {
         lucide.createIcons();
     }
 
+    // Render all academies in Academias Locales section
+    if (typeof renderAllAcademies === 'function') {
+        renderAllAcademies();
+    }
+
     // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
@@ -44,8 +49,10 @@ function revealSimulator(event) {
     if (eventos) {
         eventos.classList.remove('hidden-section');
     }
-    if (typeof selectProfile === 'function') {
-        selectProfile('arte');
+    if (typeof selectProfile === 'function' && typeof profilesData !== 'undefined') {
+        const keys = Object.keys(profilesData);
+        const randomKey = keys[Math.floor(Math.random() * keys.length)];
+        selectProfile(randomKey);
     }
     const simSection = document.getElementById('simulador');
     if (simSection) {

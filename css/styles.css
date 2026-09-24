@@ -649,13 +649,14 @@ html {
 
 @media (min-width: 1024px) {
     .simulator-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 1rem;
     }
 }
 
 .profile-btn {
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem 0.75rem;
     border-radius: 1rem;
     border: 2px solid #e2e8f0;
     background-color: #ffffff;
@@ -760,6 +761,16 @@ html {
 .simulator-event-title { font-weight: 700; color: #ffffff; display: block; margin-bottom: 0.125rem; }
 .simulator-event-date { color: #cbd5e1; }
 .btn-simulator-attend { color: #c4b5fd; font-weight: 700; background: none; border: none; cursor: pointer; margin-left: 0.5rem; }
+
+.academy-card-compact { background-color: rgba(255,255,255,0.05); padding: 0.75rem; border-radius: 0.75rem; border: 1px solid rgba(255,255,255,0.1); display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; gap: 1rem; }
+.academy-card-compact .academy-name { font-weight: 700; color: #ffffff; display: block; margin-bottom: 0.125rem; }
+.academy-card-compact .academy-meta { color: #cbd5e1; display: block; }
+.academy-card-compact .btn-academy-info { color: #c4b5fd; font-weight: 700; background: none; border: none; cursor: pointer; margin-left: 0.5rem; white-space: nowrap; }
+
+.academy-card-compact-light { background-color: #f8fafc; padding: 0.75rem; border-radius: 0.75rem; border: 1px solid #e2e8f0; display: flex; align-items: center; justify-content: space-between; font-size: 0.75rem; gap: 1rem; }
+.academy-card-compact-light .academy-name { font-weight: 700; color: #0f172a; display: block; margin-bottom: 0.125rem; }
+.academy-card-compact-light .academy-meta { color: #64748b; display: block; }
+.academy-card-compact-light .btn-academy-info { color: #6366f1; font-weight: 700; background: none; border: none; cursor: pointer; margin-left: 0.5rem; white-space: nowrap; }
 
 .simulator-interactive-content {
     display: none;

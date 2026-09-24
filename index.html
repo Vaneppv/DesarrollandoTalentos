@@ -252,12 +252,6 @@
                         <div id="result-events" class="flex-col-gap-sm">
                             <!-- Injected by simulator.js -->
                         </div>
-                        <div class="route-box">
-                            <span class="text-xs font-bold text-indigo-300 uppercase tracking-wider block margin-bottom-sm">Ruta de Desarrollo Sugerida</span>
-                            <p id="result-route" class="text-xs sm:text-sm text-slate-300 leading-relaxed">
-                                Nivel 1: Taller de iniciación cromática -> Nivel 2: Técnicas mixtas y volumen -> Nivel 3: Exposición en galería juvenil.
-                            </p>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -270,42 +264,10 @@
         <div class="container-custom">
             <div class="section-header">
                 <h2 class="section-title font-heading">Academias Locales</h2>
-                <p class="section-subtitle">Escuelas especializadas en pintura, dibujo y música validadas para el desarrollo óptimo de los niños.</p>
+                <p class="section-subtitle">Escuelas especializadas en arte, música, danza y tecnología validadas para el desarrollo óptimo de los niños en Maracaibo.</p>
             </div>
 
-            <div class="grid-2">
-                <!-- Academy 1 -->
-                <div class="card-item card-flex">
-                    <div>
-                        <div class="card-header-flex">
-                            <span class="badge-tag margin-bottom-none badge-indigo-soft">🎨 Arte Plásticas</span>
-                            <span class="rating-badge"><i data-lucide="star" class="star-icon"></i> 4.9</span>
-                        </div>
-                        <h3 class="card-title font-heading">Academia de Artes Plásticas 'Picassito'</h3>
-                        <p class="card-desc card-desc-mb">Curso: Pintura al Óleo, Acuarela y Expresión Creativa infantil.</p>
-                        <p class="card-location">
-                            <i data-lucide="map-pin" class="icon-sm mr-1-5 text-slate-muted"></i> Zona Norte (A 1.2 km de tu ubicación)
-                        </p>
-                    </div>
-                    <button onclick="alert('¡Información solicitada de Picassito!')" class="btn-full-sm btn-secondary">Solicitar Información</button>
-                </div>
-
-                <!-- Academy 2 -->
-                <div class="card-item card-flex">
-                    <div>
-                        <div class="card-header-flex">
-                            <span class="badge-tag margin-bottom-none badge-purple-soft">🎵 Música y Ritmo</span>
-                            <span class="rating-badge"><i data-lucide="star" class="star-icon"></i> 5.0</span>
-                        </div>
-                        <h3 class="card-title font-heading">Conservatorio Infantil 'Mozart Kids'</h3>
-                        <p class="card-desc card-desc-mb">Curso: Iniciación Musical, Violín y Teclado para niños.</p>
-                        <p class="card-location">
-                            <i data-lucide="map-pin" class="icon-sm mr-1-5 text-slate-muted"></i> Zona Este (A 1.8 km de tu ubicación)
-                        </p>
-                    </div>
-                    <button onclick="alert('¡Información solicitada de Mozart Kids!')" class="btn-full-sm btn-secondary">Solicitar Información</button>
-                </div>
-            </div>
+            <div id="all-academies-container" class="flex-col-gap"></div>
         </div>
     </section>
 
@@ -413,7 +375,7 @@
     <!-- Footer -->
     <footer class="site-footer">
         <div class="container-custom">
-            <p>TechUniversal • Proyecto FLL 2026. Hecho con pasión para los pequeños talentos.</p>
+            <p>TechUniversal • Proyecto FLL 2026. Hecho con pasión por y para los pequeños talentos.</p>
         </div>
     </footer>
 
